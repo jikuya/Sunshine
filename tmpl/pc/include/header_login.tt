@@ -1,0 +1,29 @@
+<form action="/login/" method="post" class="form-horizontal">
+  <div class="modal hide fade" id="loginModal">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">x</a>
+        <h3>ログイン</h3>
+    </div>
+    <div class="modal-body">
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">メールアドレス</label>
+        <div class="controls">
+          <input type="text" name="email" value="" id="inputEmail">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="inputPasswd">パスワード</label>
+        <div class="controls">
+          <input type="password" id="inputPasswd" name="passwd" value="" placeholder="6文字以上の英数字">
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="control-group">
+        <div class="controls">
+          <button type="submit" class="btn btn-primary" id="tagModalNext">ログインする</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

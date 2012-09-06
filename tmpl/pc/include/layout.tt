@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>[% title || 'Sunshine' %]</title>
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="[% uri_for('/static/bootstrap/bootstrap.min.css') %]" rel="stylesheet" type="text/css" />
+    <link href="[% static_file('/static/css/main.css') %]" rel="stylesheet" type="text/css" media="screen" />
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body[% IF bodyID %] id="[% bodyID %]"[% END %]>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="/">Sunshine</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        [% IF login_name %]
+                            <li><a href="/publishe/create">Publishe</a></li>
+                        [% END %]
+                    </ul>
+                    <ul class="nav pull-right">
+                        [% IF common.login %]
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">[% common.user_info.nickname %]<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                <li><a href="">プロフィール</a></li>
+                                <li><a href="">設定変更</a></li>
+                                <li class="divider"></li> 
+                                <li><a href="/logout/">Logout</a></li>
+                                </ul>
+                            </li>
+                        [% ELSE %]
+                            <li><a href="/signup/" data-toggle="modal">Signup</a></li>
+                            <li><a href="#loginModal" data-toggle="modal">Login</a></li>
+                        [% END %]
+                    </ul>
+                </div>
+            </div>
+        </div><!-- /.navbar-inner -->
+    </div><!-- /.navbar -->
+    [% INCLUDE 'include/header_login.tt' %] 
+    
+    <div class="container">
+        <div id="main">
+            [% content %]
+        </div>
+        <footer class="footer">
+            Powered by <a href="http://amon.64p.org/">Amon2</a>
+        </footer>
+    </div>
+    <script src="[% uri_for('/static/js/jquery-1.8.0.min.js') %]"></script>
+    <script src="[% uri_for('/static/bootstrap/bootstrap.min.js') %]"></script>
+    <script src="[% uri_for('/static/js/es5-shim.min.js') %]"></script>
+    <script src="[% uri_for('/static/js/micro_template.js') %]"></script>
+    <script src="[% uri_for('/static/js/strftime.js') %]"></script>
+    <script src="[% uri_for('/static/js/sprintf-0.7-beta1.js') %]"></script>
+    <script src="[% uri_for('/static/js/sprintf-0.7-beta1.js') %]"></script>
+    <script src="[% uri_for('/static/js/micro-location.js') %]"></script>
+    <script src="[% static_file('/static/js/main.js') %]"></script>
+</body>
+</html>

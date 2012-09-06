@@ -1,0 +1,29 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<form action="/signup/" method="post" class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="inputNickname">ニックネーム</label>
+    <div class="controls">
+      <input type="text" name="nickname" value="" id="inputNickname" placeholder="4文字以上の英数字">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">メールアドレス</label>
+    <div class="controls">
+      <input type="text" name="email" value="" id="inputEmail">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPasswd">パスワード</label>
+    <div class="controls">
+      <input type="password" id="inputPasswd" name="passwd" value="" placeholder="6文字以上の英数字">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn btn-primary">登録する</button>
+    </div>
+  </div>
+</form>
+
+[% END %]

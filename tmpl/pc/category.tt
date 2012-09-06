@@ -1,0 +1,7 @@
+[% WRAPPER 'include/layout.tt' %]
+
+[% FOR p IN publishes %]
+    <p><a href="/publishe/view/[% p.id %]">[% p.title %]</a> | [% p.body %] | [% p.nickname %] </p>
+[% END %]
+
+[% END %]

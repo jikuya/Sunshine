@@ -1,0 +1,11 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<p>[% publishe.category_mst %]</p>
+<p>[% publishe.contents_type %]</p>
+
+<p>[% publishe.title %]</p>
+<p>[% publishe.body %]</p>
+<p>[% publishe.nickname %]</p>
+<p>[% publishe.link %]</p>
+
+[% END %]
