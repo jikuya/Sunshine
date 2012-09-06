@@ -12,8 +12,6 @@ sub index {
         {Slice => {}}
     );
 
-use Data::Dumper;
-warn Dumper $c->common;
     $c->render(
         'index.tt',
         {

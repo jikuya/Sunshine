@@ -75,7 +75,7 @@ __PACKAGE__->add_trigger(
         if (my $nickname = $c->session->get('nickname')) {
             $c->common({login => 1, user_info => {nickname => $nickname}});
         } else {
-            $c->common->{login} = undef;
+            $c->common({login => 0});
         }
     },
     AFTER_DISPATCH => sub {

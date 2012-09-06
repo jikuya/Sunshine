@@ -1,6 +1,6 @@
 [% WRAPPER 'include/layout.tt' %]
 
-<form action="/signup/" method="post" class="form-horizontal">
+<form action="/signup/begin" method="post" class="form-horizontal">
   <div class="control-group">
     <label class="control-label" for="inputNickname">ニックネーム</label>
     <div class="controls">

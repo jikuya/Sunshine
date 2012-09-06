@@ -23,4 +23,34 @@ sub setup_schema {
     }
 }
 
+use Email::Sender::Simple qw(sendmail);
+use Email::Simple;
+use Email::Simple::Creator;
+use Data::Recursive::Encode;
+use Encode;
+sub send_mail {
+    my $self       = shift;
+    my $to_name    = shift;
+    my $to_address = shift;
+    my $subject    = shift;
+    my $body       = shift;
+
+    my $email = Email::Simple->create(
+        header => Data::Recursive::Encode->encode(
+            'MIME-Header-ISO_2022_JP' => [
+                To      => qq/"$to_name" <$to_address>/,
+                From    => '"Sunshine" <info@sunshine.com>',
+                Subject => $subject,
+            ]
+        ),
+        body       => encode('utf-8', $body),
+        attributes => {
+            content_type => 'text/plain',
+            charset      => 'UTF-8',
+            encoding     => '7bit',
+        },
+    );
+    sendmail($email);
+}
+
 1;

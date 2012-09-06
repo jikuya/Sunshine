@@ -10,8 +10,10 @@ use Module::Pluggable::Object;
 # define roots here.
 my $router = router {
     # connect '/' => {controller => 'Root', action => 'index' };
-    connect '/category/:id'      => {controller => 'Category', action => 'index' };
-    connect '/publishe/view/:id' => {controller => 'Publishe', action => 'view' };
+    connect '/signup/begin'           => {controller => 'Signup',   action => 'begin' };
+    connect '/signup/complete/:token' => {controller => 'Signup',   action => 'complate' };
+    connect '/category/:id'           => {controller => 'Category', action => 'index' };
+    connect '/publishe/view/:id'      => {controller => 'Publishe', action => 'view' };
 };
 
 my @controllers = Module::Pluggable::Object->new(

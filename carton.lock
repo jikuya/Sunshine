@@ -296,7 +296,7 @@
                },
                "runtime" : {
                   "requires" : {
-                     "Moose" : "0"
+                     "Mouse" : "0.40"
                   }
                }
             },
@@ -612,7 +612,7 @@
             "prereqs" : {
                "build" : {
                   "requires" : {
-                     "ExtUtils::MakeMaker" : "6.6302",
+                     "ExtUtils::MakeMaker" : "6.62",
                      "Test::More" : "0.47"
                   }
                },
@@ -880,14 +880,14 @@
          "version" : "1.37"
       },
       "DBD::mysql" : {
-         "dist" : "DBD-mysql-4.021",
+         "dist" : "DBD-mysql-4.022",
          "mymeta" : {
             "abstract" : "A MySQL driver for the Perl5 Database Interface (DBI)",
             "author" : [
                "Rudy Lippan <rlippan@remotelinux.com>"
             ],
             "dynamic_config" : 0,
-            "generated_by" : "ExtUtils::MakeMaker version 6.55_02, CPAN::Meta::Converter version 2.120630",
+            "generated_by" : "ExtUtils::MakeMaker version 6.57_05, CPAN::Meta::Converter version 2.120630",
             "license" : [
                "perl_5"
             ],
@@ -927,10 +927,10 @@
                   "url" : "https://github.com/CaptTofu/DBD-mysql"
                }
             },
-            "version" : "4.021"
+            "version" : "4.022"
          },
          "name" : "DBD::mysql",
-         "pathname" : "C/CA/CAPTTOFU/DBD-mysql-4.021.tar.gz",
+         "pathname" : "C/CA/CAPTTOFU/DBD-mysql-4.022.tar.gz",
          "provides" : {
             "Bundle::DBD::mysql" : {
                "file" : "Bundle/DBD/mysql.pm",
@@ -938,7 +938,7 @@
             },
             "DBD::mysql" : {
                "file" : "DBD/mysql.pm",
-               "version" : "4.021"
+               "version" : "4.022"
             },
             "DBD::mysql::GetInfo" : {
                "file" : "DBD/mysql/GetInfo.pm"
@@ -954,7 +954,7 @@
             }
          },
          "target" : "DBD::mysql",
-         "version" : "4.021"
+         "version" : "4.022"
       },
       "DBI" : {
          "dist" : "DBI-1.622",
@@ -2058,6 +2058,70 @@
          "target" : "Devel::StackTrace::AsHTML",
          "version" : "0.11"
       },
+      "Digest::HMAC" : {
+         "dist" : "Digest-HMAC-1.03",
+         "mymeta" : {
+            "abstract" : "Keyed-Hashing for Message Authentication",
+            "author" : [
+               "Gisle Aas <gisle@activestate.com>"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "ExtUtils::MakeMaker version 6.57_05, CPAN::Meta::Converter version 2.120630",
+            "license" : [
+               "perl_5"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Digest-HMAC",
+            "no_index" : {
+               "directory" : [
+                  "t",
+                  "inc"
+               ]
+            },
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "0"
+                  }
+               },
+               "configure" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "0"
+                  }
+               },
+               "runtime" : {
+                  "requires" : {
+                     "Digest::MD5" : "2",
+                     "Digest::SHA" : "1",
+                     "perl" : "5.004"
+                  }
+               }
+            },
+            "release_status" : "stable",
+            "version" : "1.03"
+         },
+         "name" : "Digest::HMAC",
+         "pathname" : "G/GA/GAAS/Digest-HMAC-1.03.tar.gz",
+         "provides" : {
+            "Digest::HMAC" : {
+               "file" : "Digest/HMAC.pm",
+               "version" : "1.03"
+            },
+            "Digest::HMAC_MD5" : {
+               "file" : "Digest/HMAC_MD5.pm",
+               "version" : "1.01"
+            },
+            "Digest::HMAC_SHA1" : {
+               "file" : "Digest/HMAC_SHA1.pm",
+               "version" : "1.03"
+            }
+         },
+         "target" : "Digest::HMAC_SHA1",
+         "version" : "1.03"
+      },
       "Digest::SHA1" : {
          "dist" : "Digest-SHA1-2.13",
          "mymeta" : {
@@ -2918,7 +2982,7 @@
                "version" : "0.120001"
             }
          },
-         "target" : "Email::Sender",
+         "target" : "Email::Sender::Simple",
          "version" : "0.120001"
       },
       "Email::Simple" : {
@@ -4378,7 +4442,7 @@
                "version" : "5.02"
             }
          },
-         "target" : "HTML::Tree",
+         "target" : "HTML::TreeBuilder",
          "version" : "5.02"
       },
       "HTTP::Body" : {
@@ -4777,7 +4841,7 @@
                "version" : "6.03"
             }
          },
-         "target" : "HTTP::Response",
+         "target" : "HTTP::Headers",
          "version" : "6.03"
       },
       "HTTP::Negotiate" : {
@@ -6398,7 +6462,7 @@
          "version" : "2.0603"
       },
       "Mouse" : {
-         "dist" : "Mouse-1.01",
+         "dist" : "Mouse-1.02",
          "mymeta" : {
             "abstract" : "Moose minus the antlers",
             "author" : [
@@ -6456,15 +6520,15 @@
                   "url" : "git://github.com/gfx/p5-Mouse.git"
                }
             },
-            "version" : "1.01",
+            "version" : "1.02",
             "x_module_name" : "Mouse"
          },
          "name" : "Mouse",
-         "pathname" : "G/GF/GFUJI/Mouse-1.01.tar.gz",
+         "pathname" : "G/GF/GFUJI/Mouse-1.02.tar.gz",
          "provides" : {
             "Mouse" : {
                "file" : "Mouse.pm",
-               "version" : "1.01"
+               "version" : "1.02"
             },
             "Mouse::Exporter" : {
                "file" : "Mouse/Exporter.pm"
@@ -6519,22 +6583,22 @@
             },
             "Mouse::Role" : {
                "file" : "Mouse/Role.pm",
-               "version" : "1.01"
+               "version" : "1.02"
             },
             "Mouse::Spec" : {
                "file" : "Mouse/Spec.pm",
-               "version" : "1.01"
+               "version" : "1.02"
             },
             "Mouse::Tiny" : {
                "file" : "Mouse/Tiny.pm",
-               "version" : "1.01"
+               "version" : "1.02"
             },
             "Mouse::TypeRegistry" : {
                "file" : "Mouse/TypeRegistry.pm"
             },
             "Mouse::Util" : {
                "file" : "Mouse/Util.pm",
-               "version" : "1.01"
+               "version" : "1.02"
             },
             "Mouse::Util::MetaRole" : {
                "file" : "Mouse/Util/MetaRole.pm"
@@ -6556,7 +6620,7 @@
             }
          },
          "target" : "Mouse",
-         "version" : "1.01"
+         "version" : "1.02"
       },
       "Net::HTTP" : {
          "dist" : "Net-HTTP-6.03",
@@ -7567,7 +7631,7 @@
          "version" : "1.07"
       },
       "Plack" : {
-         "dist" : "Plack-1.0002",
+         "dist" : "Plack-1.0003",
          "mymeta" : {
             "abstract" : "Perl Superglue for Web frameworks and Web Servers (PSGI toolkit)",
             "author" : [
@@ -7637,11 +7701,11 @@
                   "url" : "git://github.com/plack/Plack.git"
                }
             },
-            "version" : "1.0002",
+            "version" : "1.0003",
             "x_authority" : "MIYAGAWA"
          },
          "name" : "Plack",
-         "pathname" : "M/MI/MIYAGAWA/Plack-1.0002.tar.gz",
+         "pathname" : "M/MI/MIYAGAWA/Plack-1.0003.tar.gz",
          "provides" : {
             "HTTP::Message::PSGI" : {
                "file" : "HTTP/Message/PSGI.pm"
@@ -7651,7 +7715,7 @@
             },
             "Plack" : {
                "file" : "Plack.pm",
-               "version" : "1.0002"
+               "version" : "1.0003"
             },
             "Plack::App::CGIBin" : {
                "file" : "Plack/App/CGIBin.pm"
@@ -7832,14 +7896,14 @@
             },
             "Plack::Request" : {
                "file" : "Plack/Request.pm",
-               "version" : "1.0002"
+               "version" : "1.0003"
             },
             "Plack::Request::Upload" : {
                "file" : "Plack/Request/Upload.pm"
             },
             "Plack::Response" : {
                "file" : "Plack/Response.pm",
-               "version" : "1.0002"
+               "version" : "1.0003"
             },
             "Plack::Runner" : {
                "file" : "Plack/Runner.pm"
@@ -7882,7 +7946,7 @@
             }
          },
          "target" : "Plack",
-         "version" : "1.0002"
+         "version" : "1.0003"
       },
       "Plack::Middleware::ReverseProxy" : {
          "dist" : "Plack-Middleware-ReverseProxy-0.14",
@@ -7956,14 +8020,14 @@
          "version" : "0.14"
       },
       "Plack::Middleware::Session" : {
-         "dist" : "Plack-Middleware-Session-0.14",
+         "dist" : "Plack-Middleware-Session-0.15",
          "mymeta" : {
             "abstract" : "Middleware for session management",
             "author" : [
                "Tatsuhiko Miyagawa"
             ],
             "dynamic_config" : 0,
-            "generated_by" : "Module::Install version 1.00, CPAN::Meta::Converter version 2.120630",
+            "generated_by" : "Module::Install version 1.06, CPAN::Meta::Converter version 2.120630",
             "license" : [
                "perl_5"
             ],
@@ -7982,22 +8046,23 @@
             "prereqs" : {
                "build" : {
                   "requires" : {
-                     "ExtUtils::MakeMaker" : "6.42",
-                     "Test::Exception" : "0",
+                     "ExtUtils::MakeMaker" : "6.36",
+                     "Test::Fatal" : "0",
                      "Test::More" : "0.88",
                      "Test::Requires" : "0"
                   }
                },
                "configure" : {
                   "requires" : {
-                     "ExtUtils::MakeMaker" : "6.42"
+                     "ExtUtils::MakeMaker" : "6.36"
                   }
                },
                "runtime" : {
                   "requires" : {
+                     "Digest::HMAC_SHA1" : "1.03",
                      "Digest::SHA1" : "0",
                      "Plack" : "0.9910",
-                     "Test::Exception" : "0",
+                     "Test::Fatal" : "0",
                      "Test::More" : "0.88",
                      "Test::Requires" : "0"
                   }
@@ -8009,37 +8074,37 @@
                   "http://dev.perl.org/licenses/"
                ]
             },
-            "version" : "0.14"
+            "version" : "0.15"
          },
          "name" : "Plack::Middleware::Session",
-         "pathname" : "M/MI/MIYAGAWA/Plack-Middleware-Session-0.14.tar.gz",
+         "pathname" : "M/MI/MIYAGAWA/Plack-Middleware-Session-0.15.tar.gz",
          "provides" : {
             "Plack::Middleware::Session" : {
                "file" : "Plack/Middleware/Session.pm",
-               "version" : "0.14"
+               "version" : "0.15"
             },
             "Plack::Middleware::Session::Cookie" : {
                "file" : "Plack/Middleware/Session/Cookie.pm"
             },
             "Plack::Session" : {
                "file" : "Plack/Session.pm",
-               "version" : "0.14"
+               "version" : "0.15"
             },
             "Plack::Session::State" : {
                "file" : "Plack/Session/State.pm",
-               "version" : "0.14"
+               "version" : "0.15"
             },
             "Plack::Session::State::Cookie" : {
                "file" : "Plack/Session/State/Cookie.pm",
-               "version" : "0.14"
+               "version" : "0.15"
             },
             "Plack::Session::Store" : {
                "file" : "Plack/Session/Store.pm",
-               "version" : "0.14"
+               "version" : "0.15"
             },
             "Plack::Session::Store::Cache" : {
                "file" : "Plack/Session/Store/Cache.pm",
-               "version" : "0.14"
+               "version" : "0.15"
             },
             "Plack::Session::Store::DBI" : {
                "file" : "Plack/Session/Store/DBI.pm",
@@ -8047,15 +8112,15 @@
             },
             "Plack::Session::Store::File" : {
                "file" : "Plack/Session/Store/File.pm",
-               "version" : "0.14"
+               "version" : "0.15"
             },
             "Plack::Session::Store::Null" : {
                "file" : "Plack/Session/Store/Null.pm",
-               "version" : "0.14"
+               "version" : "0.15"
             }
          },
          "target" : "Plack::Session",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "Proc::Wait3" : {
          "dist" : "Proc-Wait3-0.04",
@@ -8943,14 +9008,14 @@
          "version" : "0.984"
       },
       "Sub::Exporter::Progressive" : {
-         "dist" : "Sub-Exporter-Progressive-0.001004",
+         "dist" : "Sub-Exporter-Progressive-0.001006",
          "mymeta" : {
             "abstract" : "Only use Sub::Exporter if you need it",
             "author" : [
                "frew - Arthur Axel Schmidt (cpan:FREW) <frioux+cpan@gmail.com>"
             ],
             "dynamic_config" : 0,
-            "generated_by" : "ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.120921, CPAN::Meta::Converter version 2.120630",
+            "generated_by" : "ExtUtils::MakeMaker version 6.6302, CPAN::Meta::Converter version 2.120921, CPAN::Meta::Converter version 2.120630",
             "license" : [
                "perl_5"
             ],
@@ -8968,7 +9033,7 @@
             "prereqs" : {
                "build" : {
                   "requires" : {
-                     "ExtUtils::MakeMaker" : "0"
+                     "Test::More" : "0.89"
                   }
                },
                "configure" : {
@@ -8981,18 +9046,18 @@
                }
             },
             "release_status" : "stable",
-            "version" : "0.001004"
+            "version" : "0.001006"
          },
          "name" : "Sub::Exporter::Progressive",
-         "pathname" : "M/MS/MSTROUT/Sub-Exporter-Progressive-0.001004.tar.gz",
+         "pathname" : "L/LE/LEONT/Sub-Exporter-Progressive-0.001006.tar.gz",
          "provides" : {
             "Sub::Exporter::Progressive" : {
                "file" : "Sub/Exporter/Progressive.pm",
-               "version" : "0.001004"
+               "version" : "0.001006"
             }
          },
          "target" : "Sub::Exporter::Progressive",
-         "version" : "0.001004"
+         "version" : "0.001006"
       },
       "Sub::Install" : {
          "dist" : "Sub-Install-0.926",
@@ -10842,7 +10907,7 @@
                "version" : "0.102080"
             }
          },
-         "target" : "Throwable",
+         "target" : "Throwable::Error",
          "version" : "0.102080"
       },
       "Tree::DAG_Node" : {

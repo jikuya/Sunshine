@@ -16,4 +16,7 @@ if ( -d '/home/dotcloud/') {
             sqlite_unicode => 1,
         }
     ],
+    'ENV' => 'development',
+    'SITE_URL' => 'http://localhost:5000',
+    'CRYPT_SALT' => 'sonomamaeast',
 };
